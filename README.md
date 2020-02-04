@@ -47,12 +47,13 @@ design flaws:
   - Why is this a problem?
     - Positioning the TOS agreement within the form makes logistical sense, as the user would like to know what they are agreeing to prior to signing up. Furthermore, if the user is using a screenreader this is something that should be stated prior to signing up.
   - Solution:
-    - Place in form to notify user what they are potentially agreeing to prior to signing up.
+    - Place in form to notify user what they are potentially agreeing to prior to actually signing up makes sense logistically and logically.
 
 design opinion:
 
-- Eliminate header and footer menu, move into hamburger menu
+- Eliminate header and footer menu, hamburger icon. Colocate all options in one header menu.
   - Why?
     - The primary objective of a landing page is having the highest conversion rate possible. Lots of text, options, anything that distracts the user from filling out the form / signing up / etc is detrimental to that objective
+    - Hamburger menu icon is one more asset to have, + can sometimes have issues when user has bad internet connection, device performance, or visual / cognitive impairment
   - Solution
-    - Hamburger menu will contain: About, Integrations, Pricing, Contact, Help, Privacy Policy
+    - Replace hamburger icon with 'Menu'; will contain: About, Integrations, Pricing, Contact, Help, Privacy Policy
