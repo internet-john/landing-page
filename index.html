@@ -15,69 +15,106 @@
   </head>
   <body>
     <style type="text/css">
-      body {
-        height: 100vh;
-        width: 100vw;
-        font-size: 100%;
-        /* font-display: ''; */
-        /* font-fallback: ''; */
-        display: grid;
-        overflow-x: hidden;
-        overflow-y: hidden;
+      @font-face {
+        font-family: "Roboto";
+        src: local("Roboto"), local("Roboto-Regular"),
+          url("./resources/fonts/Roboto-Regular.ttf");
       }
 
+      body {
+        height: 100%;
+        width: 100%;
+        font-size: 100%;
+        overflow-x: hidden;
+        font-family: "Roboto", Arial, Helvetica, Georgia;
+        font-display: fallback;
+      }
+
+      /* @media screen and (max-width: 480px) {
+        body {
+          flex-wrap: wrap;
+        }
+      } */
+
       .header {
-        height: 30vh;
-        width: 100vw;
-        display: inline-grid;
-        grid-template-columns: 90% 10%;
+        height: 10vh;
         padding: 0 17.5px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .header .header__menu {
+        font-size: 1.25em;
       }
 
       .call-to-action-container {
         height: 60vh;
-        width: 100vw;
-        display: grid;
-        grid-template-columns: 40% 60%;
+        width: 80vw;
+        padding: 10vh 10vw;
+        display: flex;
+        /* flex-wrap: wrap; figure out media queries  and add flex wrap for mobile devices */
+        justify-content: space-between;
       }
 
-      .hero .hero__text {
-        padding: 10% 30% 20% 30%;
-        width: 75%;
+      .hero .hero__text-container {
+        width: 100%;
       }
 
       .hero .hero__text-header {
-        font-size: 3em;
-        font-weight: 800;
+        font-size: 3.5em;
         margin-bottom: 0;
       }
 
       .hero .hero__text-subheader {
         font-size: 1.25em;
-        font-weight: 400;
         margin-top: 0;
+        width: 80%;
       }
 
       .form-container {
-        padding: 6% 15% 15% 30%;
+        width: 100%;
+        border-top-right-radius: 25px;
+        text-align: center;
       }
 
       .form-container__header {
         font-size: 1.25em;
-        margin-bottom: 20px;
-        text-align: center;
+        margin-bottom: 10px;
       }
 
-      .form {
-        width: 100%;
-        background-color: transparent;
-        border-color: lightgray;
-        border-radius: 5px;
-        border-width: 1px;
-      }
-
-      input {
+      .form input,
+      button {
         height: 5vh;
+        width: 100%;
+        border-width: 1px;
+        border-color: lightgray;
+        border-right-width: 2px;
+        border-right-color: gray;
+        border-left-width: 2px;
+        border-right-color: gray;
+      }
+
+      .form .form__input-name {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-width: 2px;
+        border-color: gray;
+      }
+
+      button {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-width: 2px;
+        border-color: gray;
+        width: 102.5%;
+      }
+
+      .form .form__tos-agreement-text,
+      .form__tos-agreement-text-link,
+      a {
+        width: 101.5%;
+        margin: 0;
+        text-decoration: none;
       }
 
       ::placeholder {
@@ -85,18 +122,12 @@
       }
 
       .footer {
-        height: 10vh;
-        width: 100vw;
-        padding: 0 25px;
+        margin: 0 20px;
       }
     </style>
     <header class="header">
-      <div class="header header__logo">
-        <h1 class="header header__logo-text">Stamp</h1>
-      </div>
-      <div class="header header__menu">
-        =
-      </div>
+      <h1 class="header header__logo">Stamp</h1>
+      <h5 class="header header__menu">Menu</h5>
       <!-- <div class="header header__menu-item">About</div>
         <div class="header header__menu-item">Integrations</div>
         <div class="header header__menu-item">Pricing</div>
@@ -104,7 +135,7 @@
     </header>
     <div class="call-to-action-container">
       <div class="hero">
-        <div class="hero hero__text">
+        <div class="hero hero__text-container">
           <h1 class="hero hero__text-header">
             A simple way to organize your inspiration.
           </h1>
@@ -137,31 +168,24 @@
               placeholder="Password"
               required
             />
+            <div class="form form__tos-agreement">
+              <p class="form form__tos-agreement-text">
+                By clicking "Sign up" I agree to our
+                <a class="form form__tos-agreement-text-link" href="#"
+                  >Terms of Service.</a
+                >
+              </p>
+            </div>
+            <button type="form form__submit">Sign Up ></button>
           </div>
-          <div class="tos-agreement">
-            <p class="tos-agreement tos-agreement__text">
-              By clicking "Sign up" I agree to our
-              <a class="tos-agreement tos-agreement__text_link" href="#"
-                >Terms of Service</a
-              >
-              .
-            </p>
-          </div>
-          <button type="form form__submit">Sign up ></button>
         </form>
       </div>
     </div>
-    <footer class="footer">
+    <div class="footer">
       <p class="footer footer__copyright">
         © 2016 Stamp. All Rights Reserved.
       </p>
-      <div class="footer footer__menu">
-        <div class="footer footer-item">CONTACT</div>
-        <div class="footer footer-item">HELP</div>
-        <div class="footer footer-item">TERMS OF USE</div>
-        <div class="footer footer-item">PRIVACY POLICY</div>
-      </div>
-    </footer>
+    </div>
     <script type="text/javascript" src="./main.js" defer></script>
   </body>
 </html>
