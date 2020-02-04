@@ -14,50 +14,152 @@
     />
   </head>
   <body>
+    <style type="text/css">
+      body {
+        height: 100vh;
+        width: 100vw;
+        font-size: 100%;
+        /* font-display: ''; */
+        /* font-fallback: ''; */
+        display: grid;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+
+      .header {
+        height: 30vh;
+        width: 100vw;
+        display: inline-grid;
+        grid-template-columns: 90% 10%;
+        padding: 0 17.5px;
+      }
+
+      .call-to-action-container {
+        height: 60vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 40% 60%;
+      }
+
+      .hero .hero__text {
+        padding: 10% 30% 20% 30%;
+        width: 75%;
+      }
+
+      .hero .hero__text-header {
+        font-size: 3em;
+        font-weight: 800;
+        margin-bottom: 0;
+      }
+
+      .hero .hero__text-subheader {
+        font-size: 1.25em;
+        font-weight: 400;
+        margin-top: 0;
+      }
+
+      .form-container {
+        padding: 6% 15% 15% 30%;
+      }
+
+      .form-container__header {
+        font-size: 1.25em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .form {
+        width: 100%;
+        background-color: transparent;
+        border-color: lightgray;
+        border-radius: 5px;
+        border-width: 1px;
+      }
+
+      input {
+        height: 5vh;
+      }
+
+      ::placeholder {
+        padding-left: 5px;
+      }
+
+      .footer {
+        height: 10vh;
+        width: 100vw;
+        padding: 0 25px;
+      }
+    </style>
     <header class="header">
-      <div class="header header__logo">Stamp</div>
+      <div class="header header__logo">
+        <h1 class="header header__logo-text">Stamp</h1>
+      </div>
       <div class="header header__menu">
-        <div class="header header__menu-item">About</div>
+        =
+      </div>
+      <!-- <div class="header header__menu-item">About</div>
         <div class="header header__menu-item">Integrations</div>
         <div class="header header__menu-item">Pricing</div>
-      </div>
+      </div> -->
     </header>
-    <div class="hero">
-      <div class="hero hero__header">
-        <h1>A simple way to organize your inspiration.</h1>
+    <div class="call-to-action-container">
+      <div class="hero">
+        <div class="hero hero__text">
+          <h1 class="hero hero__text-header">
+            A simple way to organize your inspiration.
+          </h1>
+          <h5 class="hero hero__text-subheader">
+            I think what motivates people is not great hate, but great love for
+            other people.
+          </h5>
+        </div>
       </div>
-      <div class="hero hero__subheader">
-        <h5>
-          I think what motivates people is not greate hate, but great love for
-          other people.
-        </h5>
+      <div class="form-container">
+        <h5 class="form-container__header">Sign up for free</h5>
+        <form class="form">
+          <div class="form form__input">
+            <input
+              class="form form__input-name"
+              type="text"
+              placeholder="Name"
+              required
+              pattern="[a-zA-Z]{3}"
+            />
+            <input
+              class="form form__input-email"
+              type="text"
+              placeholder="E-mail"
+              required
+            />
+            <input
+              class="form form__input-password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="tos-agreement">
+            <p class="tos-agreement tos-agreement__text">
+              By clicking "Sign up" I agree to our
+              <a class="tos-agreement tos-agreement__text_link" href="#"
+                >Terms of Service</a
+              >
+              .
+            </p>
+          </div>
+          <button type="form form__submit">Sign up ></button>
+        </form>
       </div>
     </div>
-    <form class="form">
-      <h5 class="form form__header">SIGN UP FOR FREE</h5>
-      <input class="form form__name-input" type="text" placeholder="Name" />
-      <input class="form form__email-input" type="text" placeholder="Email" />
-      <input
-        class="form form__password-input"
-        type="password"
-        placeholder="Password"
-      />
-      <!-- todo: if user does not agree by clicking checkbox, disable sign up button -->
-      <p class="form form__footnote">
-        By clicking "Sign up" I agree to our Terms of Service.
-      </p>
-      <input class="form form__tos-agreement-checkbox" type="checkbox" />
-      <button type="form form__submit">Sign up ></button>
-    </form>
     <footer class="footer">
       <p class="footer footer__copyright">
         © 2016 Stamp. All Rights Reserved.
       </p>
       <div class="footer footer__menu">
-        <div class="header header__menu-item">CONTACT</div>
-        <div class="header header__menu-item">HELP</div>
-        <div class="header header__menu-item">TERMS OF USE</div>
-        <div class="header header__menu-item">PRIVACY POLICY</div>
+        <div class="footer footer-item">CONTACT</div>
+        <div class="footer footer-item">HELP</div>
+        <div class="footer footer-item">TERMS OF USE</div>
+        <div class="footer footer-item">PRIVACY POLICY</div>
       </div>
     </footer>
     <script type="text/javascript" src="./main.js" defer></script>
