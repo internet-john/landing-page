@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>super sweet landing pg</title>
+    <link
+      rel="preload"
+      type="text/css"
+      href="./style.css"
+      as="style"
+      onload="this.rel = 'stylesheet'"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header header__logo">Stamp</div>
+      <div class="header header__menu">
+        <div class="header header__menu-item">About</div>
+        <div class="header header__menu-item">Integrations</div>
+        <div class="header header__menu-item">Pricing</div>
+      </div>
+    </header>
+    <div class="hero">
+      <div class="hero hero__header">
+        <h1>A simple way to organize your inspiration.</h1>
+      </div>
+      <div class="hero hero__subheader">
+        <h5>
+          I think what motivates people is not greate hate, but great love for
+          other people.
+        </h5>
+      </div>
+    </div>
+    <form class="form">
+      <h5 class="form form__header">SIGN UP FOR FREE</h5>
+      <input class="form form__name-input" type="text" placeholder="Name" />
+      <input class="form form__email-input" type="text" placeholder="Email" />
+      <input
+        class="form form__password-input"
+        type="password"
+        placeholder="Password"
+      />
+      <!-- todo: if user does not agree by clicking checkbox, disable sign up button -->
+      <p class="form form__footnote">
+        By clicking "Sign up" I agree to our Terms of Service.
+      </p>
+      <input class="form form__tos-agreement-checkbox" type="checkbox" />
+      <button type="form form__submit">Sign up ></button>
+    </form>
+    <footer class="footer">
+      <p class="footer footer__copyright">
+        © 2016 Stamp. All Rights Reserved.
+      </p>
+      <div class="footer footer__menu">
+        <div class="header header__menu-item">CONTACT</div>
+        <div class="header header__menu-item">HELP</div>
+        <div class="header header__menu-item">TERMS OF USE</div>
+        <div class="header header__menu-item">PRIVACY POLICY</div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="./main.js" defer></script>
+  </body>
+</html>
