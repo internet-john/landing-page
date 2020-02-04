@@ -18,7 +18,11 @@
       @font-face {
         font-family: "Roboto";
         src: local("Roboto"), local("Roboto-Regular"), local("RobotoRegular"),
-          url("../resources/fonts/Roboto-Regular.ttf");
+          url("../resources/fonts/Roboto-Regular.ttf") format("woff2");
+      }
+
+      html {
+        font-size: 100%;
       }
 
       body {
@@ -26,8 +30,16 @@
         width: 100%;
         font-size: 100%;
         overflow-x: hidden;
-        font-family: "Roboto", Arial, Helvetica, Georgia;
+        font-family: "Roboto", "Roboto-Black", "Roboto-Light", "Roboto-Medium",
+          "Roboto-Thin", Arial, Helvetica, Georgia;
         font-display: fallback;
+        color: black;
+        background: rgb(63, 94, 251);
+        background: radial-gradient(
+          circle,
+          rgba(63, 94, 251, 1) 0%,
+          rgba(252, 70, 107, 1) 100%
+        );
       }
 
       /* @media screen and (max-width: 480px) {
@@ -40,11 +52,21 @@
         height: 10vh;
         padding: 0 17.5px;
         display: flex;
-        justify-content: space-between;
+      }
+
+      .header .header__logo {
+        width: 25%;
       }
 
       .header .header__menu {
-        font-size: 1.25em;
+        width: 70%;
+        margin-top: 27.5px;
+      }
+
+      .header .header__hamburger {
+        width: 5%;
+        margin-top: 22.5px;
+        font-size: 1.5em;
       }
 
       .call-to-action-container {
@@ -52,7 +74,6 @@
         width: 80vw;
         padding: 10vh 10vw;
         display: flex;
-        /* flex-wrap: wrap; figure out media queries  and add flex wrap for mobile devices */
         justify-content: space-between;
       }
 
@@ -78,7 +99,7 @@
       }
 
       .form-container__header {
-        font-size: 1.25em;
+        font-size: 1em;
         margin-bottom: 10px;
       }
 
@@ -101,20 +122,20 @@
         border-color: gray;
       }
 
-      button {
+      button,
+      .form .form__submit {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         border-bottom-width: 2px;
         border-color: gray;
-        width: 101.5%;
+        width: 101.25%;
+        font-size: 1em;
       }
 
-      .form .form__tos-agreement-text,
       .form__tos-agreement-text-link,
       a {
-        width: 101.5%;
-        margin: 0;
         text-decoration: none;
+        color: black;
       }
 
       ::placeholder {
@@ -123,15 +144,26 @@
 
       .footer {
         margin: 0 20px;
+        display: flex;
+      }
+
+      .footer .footer__copyright {
+        width: 50%;
+      }
+
+      .footer .footer__menu {
+        width: 50%;
       }
     </style>
     <header class="header">
       <h1 class="header header__logo">Stamp</h1>
-      <h5 class="header header__menu">Menu</h5>
-      <!-- <div class="header header__menu-item">About</div>
+      <div class="header header__menu">
+        <div class="header header__menu-item">About</div>
         <div class="header header__menu-item">Integrations</div>
         <div class="header header__menu-item">Pricing</div>
-      </div> -->
+        <div class="header header__menu-item">Contact</div>
+      </div>
+      <div class="header header__hamburger">=</div>
     </header>
     <div class="call-to-action-container">
       <div class="hero">
@@ -168,15 +200,14 @@
               placeholder="Password"
               required
             />
-            <div class="form form__tos-agreement">
-              <p class="form form__tos-agreement-text">
-                By clicking "Sign up" I agree to our
-                <a class="form form__tos-agreement-text-link" href="#"
-                  >Terms of Service.</a
-                >
-              </p>
-            </div>
+            <div class="form form__tos-agreement"></div>
             <button type="form form__submit">Sign Up ></button>
+            <p class="form form__tos-agreement-text">
+              By clicking "Sign Up" user agrees to the
+              <a class="form form__tos-agreement-text-link" href="#"
+                >Terms of Service.</a
+              >
+            </p>
           </div>
         </form>
       </div>
@@ -185,7 +216,11 @@
       <p class="footer footer__copyright">
         © 2016 Stamp. All Rights Reserved.
       </p>
+      <div class="footer footer__menu">
+        <div class="footer footer__menu-item">Help</div>
+        <div class="footer footer__menu-item">Terms of Service</div>
+        <div class="footer footer__menu-item">Privacy Policy</div>
+      </div>
     </div>
-    <script type="text/javascript" src="./main.js" defer></script>
   </body>
 </html>
