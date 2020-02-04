@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>super sweet landing pg</title>
+    <link
+      rel="preload"
+      type="text/css"
+      href="./style.css"
+      as="style"
+      onload="this.rel = 'stylesheet'"
+    />
+  </head>
+  <body>
+    <style type="text/css">
+      @font-face {
+        font-family: "Roboto";
+        src: local("Roboto"), local("Roboto-Regular"), local("RobotoRegular"),
+          url("../resources/fonts/Roboto-Regular.woff2");
+      }
+
+      html {
+        font-size: 100%;
+        line-height: 1;
+      }
+
+      body {
+        height: 100%;
+        width: 100%;
+        font-size: 100%;
+        overflow-x: hidden;
+        font-family: "Roboto", "Roboto-Black", "Roboto-Light", "Roboto-Medium",
+          "Roboto-Thin", Arial, Helvetica, Georgia;
+        font-display: fallback;
+        color: black;
+        background: rgb(63, 94, 251);
+        background: radial-gradient(
+          circle,
+          rgba(63, 94, 251, 1) 0%,
+          rgba(252, 70, 107, 1) 100%
+        );
+      }
+
+      @media screen and (max-width: 520px) {
+        .header,
+        .call-to-action-container,
+        .hero__text-container,
+        .form .form-container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+
+      .header {
+        padding: 0 17.5px;
+        display: flex;
+        height: 17.5vh;
+      }
+
+      .header .header__logo {
+        width: 42.5%;
+      }
+
+      .header .header__menu {
+        width: 45%;
+        margin-top: 27.5px;
+      }
+
+      .header .header__hamburger {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: transparent;
+        border: none;
+      } 
+
+      @media screen and (min-width: 521px) {
+        .header__hamburger {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 520px) {
+        .header {
+          height: 7.5vh;
+          justify-content: space-between;
+        }
+
+        .header .header__menu {
+          display: none;
+        }
+
+        .header .header__hamburger {
+          margin-top: 10px;
+          font-size: 1em;
+        }
+      }
+
+      .call-to-action-container {
+        height: 75vh;
+        padding: 0 10vw;
+        display: flex;
+      }
+
+      .hero .hero__text-container {
+        width: 95%;
+      }
+
+      .hero .hero__text-header {
+        font-size: 3.5em;
+      }
+
+      .hero .hero__text-subheader {
+        font-size: 1.25em;
+        width: 80%;
+      }
+
+      @media screen and (max-width: 520px) {
+        .hero .hero__text-header {
+          margin-bottom: 0;
+          line-height: 0.8;
+        }
+
+        .hero .hero__text-subheader {
+          margin-top: 15px;
+          line-height: 1;
+        }
+      }
+
+      .form-container {
+        width: 100%;
+        text-align: center;
+      }
+
+      .form-container__header {
+        font-size: 1em;
+        margin-bottom: 10px;
+      }
+
+      .form input,
+      button {
+        height: 5vh;
+        width: 100%;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.25);
+      }
+
+      .form .form__input-name {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+
+      button,
+      .form .form__submit {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-color: transparent;
+        font-size: 1em;
+        opacity: 1;
+        background-color: #3f5efb;
+      }
+
+      .form__tos-agreement-text-link,
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      ::placeholder {
+        padding-left: 10px;
+        color: black;
+      }
+
+      .footer {
+        margin: 0 20px;
+        display: flex;
+        bottom: 0;
+      }
+
+      .footer .footer__copyright {
+        width: 42.5%;
+      }
+
+      .footer .footer__menu {
+        width: 55%;
+      }
+
+      @media screen and (max-width: 520px) {
+        .footer {
+          margin-top: 50px;
+        }
+
+        .footer .footer__copyright {
+          width: 100%;
+        }
+
+        .footer .footer__menu {
+          display: none;
+        }
+      }
+    </style>
+    <header class="header">
+      <h1 class="header header__logo">Stamp</h1>
+      <div class="header header__menu">
+        <div class="header header__menu-item">About</div>
+        <div class="header header__menu-item">Integrations</div>
+        <div class="header header__menu-item">Pricing</div>
+        <div class="header header__menu-item">Contact</div>
+      </div>
+        <select class="header header__hamburger">
+          <option selected disabled value="=">=</option>
+          <option value="about">About</option>
+          <option value="integrations">Integrations</option>
+          <option value="pricing">Pricing</option>
+          <option value="contact">Contact</option>
+        </select>
+      </div>
+    </header>
+    <div class="call-to-action-container">
+      <div class="hero">
+        <div class="hero hero__text-container">
+          <h1 class="hero hero__text-header">
+            A simple way to organize your inspiration.
+          </h1>
+          <h5 class="hero hero__text-subheader">
+            I think what motivates people is not great hate, but great love for
+            other people.
+          </h5>
+        </div>
+      </div>
+      <div class="form-container">
+        <h5 class="form-container__header">Sign up for free</h5>
+        <form class="form">
+          <div class="form form__input">
+            <input
+              class="form form__input-name"
+              type="text"
+              placeholder="Name"
+              required
+              pattern="[a-zA-Z]{3}"
+            />
+            <input
+              class="form form__input-email"
+              type="text"
+              placeholder="E-mail"
+              required
+            />
+            <input
+              class="form form__input-password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <div class="form form__tos-agreement"></div>
+            <button type="form form__submit">Sign Up ></button>
+            <p class="form form__tos-agreement-text">
+              By clicking "Sign Up" user agrees to the
+              <a class="form form__tos-agreement-text-link" href="#"
+                >Terms of Service.</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="footer footer__copyright">
+        © 2016 Stamp. All Rights Reserved.
+      </p>
+      <div class="footer footer__menu">
+        <div class="footer footer__menu-item">Help</div>
+        <div class="footer footer__menu-item">Terms of Service</div>
+        <div class="footer footer__menu-item">Privacy Policy</div>
+      </div>
+    </div>
+  </body>
+</html>

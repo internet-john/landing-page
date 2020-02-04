@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Roboto-Black";
+  src: local("Roboto Black"), local("Roboto-Black"), local("RobotoBlack"),
+    url("../resources/fonts/Roboto-Black.woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: local("Roboto Light"), local("Roboto-Light"), local("RobotoLight"),
+    url("../resources/fonts/Roboto-Light.woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: local("Roboto Medium"), local("Roboto-Medium"), local("RobotoMedium"),
+    url("../resources/fonts/Roboto-Medium.woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Thin";
+  src: local("Roboto Thin"), local("Roboto-Thin"), local("RobotoThin"),
+    url("../resources/fonts/Roboto-Thin.woff2");
+}
+
+.header,
+.hero .hero__text-header {
+  font-family: "Roboto-Black";
+}
+
+.header .header__menu-item,
+option .hero .hero__text-subheader,
+.footer {
+  font-family: "Roboto-Light";
+}
+
+button,
+.form .form__submit {
+  font-family: "Roboto-Medium", "Roboto";
+}
+
+.form .form__tos-agreement {
+  font-family: "Roboto-Thin";
+}
+
+.form__tos-agreement-text-link,
+a {
+  font-family: "Roboto-Medium";
+}
+
+button:hover {
+  background-color: #2659fa;
+  cursor: pointer;
+}
+
+input:hover,
+input:focus {
+  font-size: 0.85em;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  caret-color: transparent;
+}
+
+.header.header__hamburger:focus {
+  outline: none;
+}
