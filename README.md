@@ -2,7 +2,7 @@
 
 landing pg
 
-steps:
+#### steps:
 
 1. write down objective, identify mvp, timesinks, subtasks, etc
 2. identify flaws and document why they are flaws and solutions
@@ -14,11 +14,11 @@ steps:
 6. implement non critical css, font-fallbacks, font-display
 7. lighthouse, pagespeed insights etc to evaluate for accessibility & perf
 
-design flaws:
+design considerations and revisions:
 
-- Header and footer menu styling inconsistent. Header menu has first letter capitalized, whereas bottom menu is all caps and heavier font-weight
+#### Header and footer menu styling inconsistent. Header menu has first letter capitalized, whereas bottom menu is all caps and heavier font-weight
 
-  - ## Why is this a problem?
+  -  Why is this a problem?
   - Solution:
     - Use header menu capitalization convention, with a bit heavier font-weight for stronger visual contrast with background
 
@@ -29,14 +29,14 @@ design flaws:
   - Solution:
     - Eliminate Contacts
 
-- 'Terms of Service' in form footnote, 'TERMS OF USE' in footer menu
+#### 'Terms of Service' in form footnote, 'TERMS OF USE' in footer menu
 
   - Why is this a problem?
     - Repeated text with assumably same intent, but inconsistency results in differing meaning confusing user
   - Solution:
     - Eliminate TERMS OF USE, use Terms of Service as is convention
 
-- Hero header has odd grammar
+#### Hero header has odd grammar
 
   - Why is this a problem?
     - Reflects poorly on legitamacy of brand and product
