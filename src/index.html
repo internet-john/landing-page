@@ -18,11 +18,12 @@
       @font-face {
         font-family: "Roboto";
         src: local("Roboto"), local("Roboto-Regular"), local("RobotoRegular"),
-          url("../resources/fonts/Roboto-Regular.ttf") format("woff2");
+          url("../resources/fonts/Roboto-Regular.woff2");
       }
 
       html {
         font-size: 100%;
+        line-height: 1;
       }
 
       body {
@@ -42,68 +43,86 @@
         );
       }
 
-      @media screen and (max-width: 480px) {
-        body {
-          height: 100vh;
-          width: 100vh;
-        }
+      @media screen and (max-width: 520px) {
         .header,
         .call-to-action-container,
         .hero__text-container,
-        .form .form-container,
-        .footer {
+        .form .form-container {
           display: flex;
           flex-wrap: wrap;
         }
       }
 
       .header {
-        height: 10vh;
+        height: 20vh;
         padding: 0 17.5px;
         display: flex;
       }
 
       .header .header__logo {
-        width: 25%;
+        width: 42.5%;
       }
 
       .header .header__menu {
-        width: 70%;
+        width: 45%;
         margin-top: 27.5px;
       }
 
       .header .header__hamburger {
-        width: 5%;
+        width: 10%;
         margin-top: 22.5px;
         font-size: 1.5em;
       }
 
+      @media screen and (max-width: 520px) {
+        .header {
+          height: 7.5vh;
+          justify-content: space-between;
+        }
+
+        .header .header__menu {
+          display: none;
+        }
+
+        .header .header__hamburger {
+          margin-top: 22.5px;
+          font-size: 1.5em;
+        }
+      }
+
       .call-to-action-container {
-        height: 60vh;
-        width: 80vw;
-        padding: 10vh 10vw;
+        height: 75vh;
+        padding: 0 10vw;
         display: flex;
-        justify-content: space-between;
       }
 
       .hero .hero__text-container {
-        width: 100%;
+        width: 95%;
       }
 
       .hero .hero__text-header {
         font-size: 3.5em;
-        margin-bottom: 0;
       }
 
       .hero .hero__text-subheader {
         font-size: 1.25em;
-        margin-top: 0;
         width: 80%;
+      }
+
+      @media screen and (max-width: 520px) {
+        .hero .hero__text-header {
+          margin-bottom: 0;
+          line-height: 0.8;
+        }
+
+        .hero .hero__text-subheader {
+          margin-top: 15px;
+          line-height: 1;
+        }
       }
 
       .form-container {
         width: 100%;
-        border-top-right-radius: 25px;
         text-align: center;
       }
 
@@ -116,29 +135,36 @@
       button {
         height: 5vh;
         width: 100%;
-        border-width: 1px;
-        border-color: lightgray;
-        border-right-width: 2px;
-        border-right-color: gray;
-        border-left-width: 2px;
-        border-right-color: gray;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.25);
+      }
+
+      input:hover,
+      input:focus {
+        font-size: 0.85em;
+        outline: none;
+        background-color: rgba(0, 0, 0, 0.1);
+        caret-color: transparent;
       }
 
       .form .form__input-name {
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
-        border-top-width: 2px;
-        border-color: gray;
       }
 
       button,
       .form .form__submit {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        border-bottom-width: 2px;
-        border-color: gray;
-        width: 101.25%;
+        border-color: transparent;
         font-size: 1em;
+        opacity: 1;
+        background-color: #3f5efb;
+      }
+
+      button:hover {
+        background-color: #2659fa;
+        cursor: pointer;
       }
 
       .form__tos-agreement-text-link,
@@ -148,7 +174,8 @@
       }
 
       ::placeholder {
-        padding-left: 5px;
+        padding-left: 10px;
+        color: black;
       }
 
       .footer {
@@ -158,11 +185,25 @@
       }
 
       .footer .footer__copyright {
-        width: 50%;
+        width: 42.5%;
       }
 
       .footer .footer__menu {
-        width: 50%;
+        width: 55%;
+      }
+
+      @media screen and (max-width: 520px) {
+        .footer {
+          margin-top: 50px;
+        }
+
+        .footer .footer__copyright {
+          width: 100%;
+        }
+
+        .footer .footer__menu {
+          display: none;
+        }
       }
     </style>
     <header class="header">
