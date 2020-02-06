@@ -14,31 +14,21 @@ landing pg
 6. implement non critical css, font-fallbacks, font-display
 7. lighthouse, pagespeed insights etc to evaluate for accessibility & perf
 
-design considerations and revisions:
+# design considerations and revisions:
 
-#### Header and footer menu styling inconsistent. Header menu has first letter capitalized, whereas bottom menu is all caps and heavier font-weight
-
-  -  Why is this a problem?
-  - Solution:
-    - Use header menu capitalization convention, with a bit heavier font-weight for stronger visual contrast with background
-
-- 'Contacts' in header menu, 'Contact' in footer menu
-
-  - Why is this a problem?
-    - Repeated text with assumably same intent, but inconsistency results in differing meaning confusing user
-  - Solution:
-    - Eliminate Contacts
-
-#### 'Terms of Service' in form footnote, 'TERMS OF USE' in footer menu
-
-  - Why is this a problem?
-    - Repeated text with assumably same intent, but inconsistency results in differing meaning confusing user
-  - Solution:
-    - Eliminate TERMS OF USE, use Terms of Service as is convention
-
-#### Hero header has odd grammar
-
-  - Why is this a problem?
-    - Reflects poorly on legitamacy of brand and product
-  - Solution:
-    - Simple Way to Organize Your Inspirations -> A simple way to organize your inspirations
+## Inconsistent grammar and term usage
+##### EX1: Header and footer menu styling inconsistent. Header menu has first letter capitalized, whereas bottom menu is all caps and heavier font-weight
+##### EX2: Contacts' in header menu, 'Contact' in footer menu
+##### EX3: 'Terms of Service' in form footnote, 'TERMS OF USE' in footer menu
+### Why is this a problem?
+* Repeated text with assumably same intent, but inconsistency results in differing meaning confusing user
+### Solution
+* Why is this a problem?
+   * Solution:
+      * Eliminate duplicate fields, converge on single capitalization convention (first letter capitalized only)
+    
+## Usage of ```.ttf``` fonts
+### Why is this a problem?
+* ```.ttf``` fonts are 50%+ heavier than woff(2) format. woff(2) is a format compressed out of the box
+### Solution
+* Replace provided ```.ttf``` fonts with ```.woff2```
