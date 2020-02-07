@@ -1,6 +1,7 @@
 # coding-challenge
 
-landing pg
+### objective: 
+* deliver a compelling landing page with no javascript. emphasis on performance, accessibility, and UX.
 
 #### steps:
 
