@@ -28,7 +28,7 @@
 }
 
 .header .header__menu-item,
-.hero .hero__text-subheader,
+option .hero .hero__text-subheader,
 .footer {
   font-family: "Roboto-Light";
 }
@@ -45,4 +45,21 @@ button,
 .form__tos-agreement-text-link,
 a {
   font-family: "Roboto-Medium";
+}
+
+button:hover {
+  background-color: #2659fa;
+  cursor: pointer;
+}
+
+input:hover,
+input:focus {
+  font-size: 0.85em;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  caret-color: transparent;
+}
+
+.header.header__hamburger:focus {
+  outline: none;
 }

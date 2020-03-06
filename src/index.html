@@ -54,9 +54,9 @@
       }
 
       .header {
-        height: 20vh;
         padding: 0 17.5px;
         display: flex;
+        height: 17.5vh;
       }
 
       .header .header__logo {
@@ -69,9 +69,17 @@
       }
 
       .header .header__hamburger {
-        width: 10%;
-        margin-top: 22.5px;
-        font-size: 1.5em;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: transparent;
+        border: none;
+      } 
+
+      @media screen and (min-width: 521px) {
+        .header__hamburger {
+          display: none;
+        }
       }
 
       @media screen and (max-width: 520px) {
@@ -85,8 +93,8 @@
         }
 
         .header .header__hamburger {
-          margin-top: 22.5px;
-          font-size: 1.5em;
+          margin-top: 10px;
+          font-size: 1em;
         }
       }
 
@@ -139,14 +147,6 @@
         background-color: rgba(0, 0, 0, 0.25);
       }
 
-      input:hover,
-      input:focus {
-        font-size: 0.85em;
-        outline: none;
-        background-color: rgba(0, 0, 0, 0.1);
-        caret-color: transparent;
-      }
-
       .form .form__input-name {
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
@@ -160,11 +160,6 @@
         font-size: 1em;
         opacity: 1;
         background-color: #3f5efb;
-      }
-
-      button:hover {
-        background-color: #2659fa;
-        cursor: pointer;
       }
 
       .form__tos-agreement-text-link,
@@ -214,7 +209,14 @@
         <div class="header header__menu-item">Pricing</div>
         <div class="header header__menu-item">Contact</div>
       </div>
-      <div class="header header__hamburger">=</div>
+        <select class="header header__hamburger">
+          <option selected disabled value="=">=</option>
+          <option value="about">About</option>
+          <option value="integrations">Integrations</option>
+          <option value="pricing">Pricing</option>
+          <option value="contact">Contact</option>
+        </select>
+      </div>
     </header>
     <div class="call-to-action-container">
       <div class="hero">
