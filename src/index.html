@@ -54,9 +54,8 @@
       }
 
       .header {
-        padding: 0 17.5px;
+        padding: 0 20px;
         display: flex;
-        height: 17.5vh;
       }
 
       .header .header__logo {
@@ -64,8 +63,17 @@
       }
 
       .header .header__menu {
+        padding: 15px 0 0 0;
         width: 45%;
-        margin-top: 27.5px;
+      }
+
+      .header .header__menu-item {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: transparent;
+        border: none;
+        position: initial;
       }
 
       .header .header__hamburger {
@@ -202,12 +210,12 @@
       }
     </style>
     <header class="header">
-      <h1 class="header header__logo">Stamp</h1>
+      <h1 class="header header__logo">yezzr</h1>
       <div class="header header__menu">
-        <div class="header header__menu-item">About</div>
-        <div class="header header__menu-item">Integrations</div>
-        <div class="header header__menu-item">Pricing</div>
-        <div class="header header__menu-item">Contact</div>
+        <button class="header header__menu-item">About</button>
+        <button class="header header__menu-item">Integrations</button>
+        <button class="header header__menu-item">Pricing</button>
+        <button class="header header__menu-item">Contact</button>
       </div>
         <select class="header header__hamburger">
           <option selected disabled value="=">=</option>
@@ -222,11 +230,10 @@
       <div class="hero">
         <div class="hero hero__text-container">
           <h1 class="hero hero__text-header">
-            A simple way to organize your inspiration.
+            Projecting surrounded literature.
           </h1>
           <h5 class="hero hero__text-subheader">
-            I think what motivates people is not great hate, but great love for
-            other people.
+            Dissimilar resolution led for and had. Peculiar delicate and pleasant provided do perceive. 
           </h5>
         </div>
       </div>
@@ -239,7 +246,6 @@
               type="text"
               placeholder="Name"
               required
-              pattern="[a-zA-Z]{3}"
             />
             <input
               class="form form__input-email"
@@ -267,7 +273,7 @@
     </div>
     <div class="footer">
       <p class="footer footer__copyright">
-        © 2016 Stamp. All Rights Reserved.
+        © 2020 Xavi Labs. All Rights Reserved.
       </p>
       <div class="footer footer__menu">
         <div class="footer footer__menu-item">Help</div>
