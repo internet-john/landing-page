@@ -23,12 +23,15 @@
 }
 
 .header,
-.hero .hero__text-header {
+.hero .hero__text-header,
+.belowFold h1,
+h3 {
   font-family: "Roboto-Black";
 }
 
 .header .header__menu-item,
 option .hero .hero__text-subheader,
+.belowFold p,
 .footer {
   font-family: "Roboto-Light";
 }
