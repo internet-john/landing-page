@@ -41,6 +41,15 @@
           rgba(63, 94, 251, 1) 0%,
           rgba(252, 70, 107, 1) 100%
         );
+        margin: 0 5%;
+      }
+
+      .aboveFold {
+        height: 100vh;
+      }
+
+      .belowFold {
+        margin: 5% 0;
       }
 
       @media screen and (max-width: 520px) {
@@ -54,17 +63,15 @@
       }
 
       .header {
-        padding: 0 20px;
         display: flex;
+        align-items: baseline;
+        width: 100%;
       }
 
-      .header .header__logo {
-        width: 42.5%;
-      }
-
-      .header .header__menu {
-        padding: 15px 0 0 0;
-        width: 45%;
+      @media screen and (max-width: 1320px) {
+        .header {
+          width: initial;
+        }
       }
 
       .header .header__menu-item {
@@ -74,6 +81,7 @@
         background: transparent;
         border: none;
         position: initial;
+        width: fit-content;
       }
 
       .header .header__hamburger {
@@ -82,7 +90,7 @@
         appearance: none;
         background: transparent;
         border: none;
-      } 
+      }
 
       @media screen and (min-width: 521px) {
         .header__hamburger {
@@ -90,10 +98,16 @@
         }
       }
 
-      @media screen and (max-width: 520px) {
+      @media screen and (max-width: 720px) {
         .header {
-          height: 7.5vh;
+          display: flex;
           justify-content: space-between;
+          margin: 5% 5% 0 5%;
+          width: initial;
+        }
+
+        .header .header__logo {
+          width: initial;
         }
 
         .header .header__menu {
@@ -191,10 +205,6 @@
         width: 42.5%;
       }
 
-      .footer .footer__menu {
-        width: 55%;
-      }
-
       @media screen and (max-width: 520px) {
         .footer {
           margin-top: 50px;
@@ -203,83 +213,206 @@
         .footer .footer__copyright {
           width: 100%;
         }
-
-        .footer .footer__menu {
-          display: none;
-        }
       }
     </style>
-    <header class="header">
-      <h1 class="header header__logo">yezzr</h1>
-      <div class="header header__menu">
-        <button class="header header__menu-item">About</button>
-        <button class="header header__menu-item">Integrations</button>
-        <button class="header header__menu-item">Pricing</button>
-        <button class="header header__menu-item">Contact</button>
-      </div>
+    <div class="aboveFold">
+      <header class="header">
+        <h1 class="header header__logo">yezzr</h1>
+        <div class="header header__menu">
+          <button class="header header__menu-item">
+            <a href=".about">About</a>
+          </button>
+          <button class="header header__menu-item">
+            <a href=".integrations">Integrations</a>
+          </button>
+          <button class="header header__menu-item">
+            <a href="pricing">Pricing</a>
+          </button>
+          <button class="header header__menu-item">
+            <a href="#contact">Contact</a>
+          </button>
+          <button class="header header__menu-item">
+            <a href="#help">Help</a>
+          </button>
+          <button class="header header__menu-item">
+            <a href="#tos">Terms of Service</a>
+          </button>
+          <button class="header header__menu-item">
+            <a href="#privacypolicy">Privacy Policy</a>
+          </button>
+        </div>
         <select class="header header__hamburger">
           <option selected disabled value="=">=</option>
-          <option value="about">About</option>
-          <option value="integrations">Integrations</option>
-          <option value="pricing">Pricing</option>
-          <option value="contact">Contact</option>
+          <option class="header header__hamburger-about" value="about">
+            <a href="#about">About</a></option
+          >
+          <option
+            class="header header__hamburger-integrations"
+            value="integrations"
+          >
+            <a href="#integrations">Integrations</a></option
+          >
+          <option class="header header__hamburger-pricing" value="pricing"
+            ><a href="#pricing">Pricing</a></option
+          >
+          <option class="header header__hamburger-contact" value="contact"
+            ><a href="#contact">Contact</a></option
+          >
+          <option class="header header__hamburger-help" value="help"
+            ><a href="#help">Help</a></option
+          >
+          <option class="header header__hamburger-tos" value="tos"
+            ><a href="#tos">Terms of Service</a></option
+          >
+          <option
+            class="header header__hamburger-privacypolicy"
+            value="privacypolicy"
+            ><a href="#privacypolicy">Privacy Policy</a></option
+          >
         </select>
-      </div>
-    </header>
-    <div class="call-to-action-container">
-      <div class="hero">
-        <div class="hero hero__text-container">
-          <h1 class="hero hero__text-header">
-            Projecting surrounded literature.
-          </h1>
-          <h5 class="hero hero__text-subheader">
-            Dissimilar resolution led for and had. Peculiar delicate and pleasant provided do perceive. 
-          </h5>
+      </header>
+      <div class="call-to-action-container">
+        <div class="hero">
+          <div class="hero hero__text-container">
+            <h1 class="hero hero__text-header">
+              Projecting surrounded literature.
+            </h1>
+            <h5 class="hero hero__text-subheader">
+              Dissimilar resolution led for and had. Peculiar delicate and
+              pleasant provided do perceive.
+            </h5>
+          </div>
+        </div>
+        <div class="form-container">
+          <h5 class="form-container__header">Sign up for free</h5>
+          <form class="form">
+            <div class="form form__input">
+              <input
+                class="form form__input-name"
+                type="text"
+                placeholder="Name"
+                required
+              />
+              <input
+                class="form form__input-email"
+                type="text"
+                placeholder="E-mail"
+                required
+              />
+              <input
+                class="form form__input-password"
+                type="password"
+                placeholder="Password"
+                required
+              />
+              <div class="form form__tos-agreement"></div>
+              <button type="form form__submit">Sign Up ></button>
+              <p class="form form__tos-agreement-text">
+                By clicking "Sign Up" user agrees to the
+                <a class="form form__tos-agreement-text-link" href="#"
+                  >Terms of Service.</a
+                >
+              </p>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="form-container">
-        <h5 class="form-container__header">Sign up for free</h5>
-        <form class="form">
-          <div class="form form__input">
-            <input
-              class="form form__input-name"
-              type="text"
-              placeholder="Name"
-              required
-            />
-            <input
-              class="form form__input-email"
-              type="text"
-              placeholder="E-mail"
-              required
-            />
-            <input
-              class="form form__input-password"
-              type="password"
-              placeholder="Password"
-              required
-            />
-            <div class="form form__tos-agreement"></div>
-            <button type="form form__submit">Sign Up ></button>
-            <p class="form form__tos-agreement-text">
-              By clicking "Sign Up" user agrees to the
-              <a class="form form__tos-agreement-text-link" href="#"
-                >Terms of Service.</a
-              >
-            </p>
-          </div>
-        </form>
+    </div>
+    <div class="belowFold">
+      <div class="about">
+        <h1>About</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit
+          turpis cursus in hac habitasse. Eu sem integer vitae justo. Habitant
+          morbi tristique senectus et netus et malesuada fames ac. Nibh nisl
+          condimentum id venenatis. Viverra vitae congue eu consequat ac felis.
+          Elit duis tristique sollicitudin nibh. Urna molestie at elementum eu.
+          Gravida rutrum quisque non tellus orci. Egestas congue quisque egestas
+          diam in arcu cursus euismod quis. Dignissim suspendisse in est ante
+          in. Accumsan tortor posuere ac ut consequat semper. Eleifend donec
+          pretium vulputate sapien nec sagittis. In hac habitasse platea
+          dictumst quisque sagittis purus sit amet. Diam quis enim lobortis
+          scelerisque fermentum dui. Eget aliquet nibh praesent tristique magna
+          sit amet. Justo nec ultrices dui sapien eget mi proin sed libero.
+        </p>
+      </div>
+      <div id="integrations">
+        <h1>Integrations</h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci a
+          scelerisque purus semper eget duis at tellus. Elementum pulvinar etiam
+          non quam lacus. Risus at ultrices mi tempus imperdiet nulla malesuada
+          pellentesque. Lectus magna fringilla urna porttitor rhoncus dolor.
+          Neque aliquam vestibulum morbi blandit cursus risus at. Risus
+          ultricies tristique nulla aliquet enim tortor at. Nam aliquam sem et
+          tortor. In eu mi bibendum neque. Eget sit amet tellus cras. Nibh
+          tellus molestie nunc non blandit massa. Dignissim sodales ut eu sem
+          integer vitae justo. Pretium nibh ipsum consequat nisl vel. In nibh
+          mauris cursus mattis molestie a iaculis at. In cursus turpis massa
+          tincidunt dui ut ornare lectus.
+        </p>
+      </div>
+      <div id="pricing">
+        <h1>Pricing</h1>
+        <h3>Starting tier at ₿21000001</h3>
+      </div>
+      <div id="contact">
+        <h1>Contact</h1>
+        <h3>holman.@gmail.com ~or~ xavi.labs@gmail.com</h3>
+      </div>
+      <div id="help">
+        <h1>Help</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor
+          aliquam nulla facilisi cras.
+        </p>
+      </div>
+      <div id="tos">
+        <h1>Terms of Service</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis eget
+          velit aliquet sagittis id consectetur. Accumsan tortor posuere ac ut.
+          Ligula ullamcorper malesuada proin libero nunc consequat interdum
+          varius sit. Nullam ac tortor vitae purus faucibus ornare. Neque ornare
+          aenean euismod elementum nisi quis eleifend quam adipiscing. Odio
+          pellentesque diam volutpat commodo sed. Vitae justo eget magna
+          fermentum iaculis. Vel fringilla est ullamcorper eget nulla facilisi
+          etiam dignissim. Vitae elementum curabitur vitae nunc sed velit
+          dignissim. Neque convallis a cras semper auctor neque vitae. Rhoncus
+          est pellentesque elit ullamcorper dignissim cras.
+        </p>
+      </div>
+      <div id="privacypolicy">
+        <h1>Privacy Policy</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec
+          ultrices tincidunt arcu non sodales neque. A iaculis at erat
+          pellentesque adipiscing commodo elit. Sed blandit libero volutpat sed
+          cras ornare arcu dui vivamus. Aenean vel elit scelerisque mauris
+          pellentesque pulvinar pellentesque. Aliquet bibendum enim facilisis
+          gravida neque convallis a. Pellentesque elit ullamcorper dignissim
+          cras tincidunt lobortis feugiat vivamus. Faucibus vitae aliquet nec
+          ullamcorper sit amet. Congue mauris rhoncus aenean vel. Et pharetra
+          pharetra massa massa. Nulla at volutpat diam ut venenatis tellus in
+          metus vulputate. Nisi scelerisque eu ultrices vitae auctor eu augue
+          ut. Bibendum est ultricies integer quis. Curabitur gravida arcu ac
+          tortor dignissim convallis aenean et tortor. Tortor consequat id porta
+          nibh venenatis cras sed felis. Integer enim neque volutpat ac
+          tincidunt vitae. Eget velit aliquet sagittis id. Viverra accumsan in
+          nisl nisi scelerisque. Faucibus turpis in eu mi.
+        </p>
       </div>
     </div>
     <div class="footer">
       <p class="footer footer__copyright">
         © 2020 Xavi Labs. All Rights Reserved.
       </p>
-      <div class="footer footer__menu">
-        <div class="footer footer__menu-item">Help</div>
-        <div class="footer footer__menu-item">Terms of Service</div>
-        <div class="footer footer__menu-item">Privacy Policy</div>
-      </div>
     </div>
   </body>
 </html>
